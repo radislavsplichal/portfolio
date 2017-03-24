@@ -1,6 +1,7 @@
-<?php echo "hello world";
+<?php //echo "hello world";
 include 'databaseConnection.php';
-
+include 'classes/Article.php';
+include 'classes/Page.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,17 +21,37 @@ include 'databaseConnection.php';
   <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
-  <h1>Welcome to my blog!</h1>
+<style>
+#footer {
+  background-color: black;
+}
+</style>
 
-  <p>This page is dedicated to my work and glorius statements. All Key supporters are super stoaked about the situation.</p>
 
-  
 
+
+
+  <div class="container">
+  <div class="row">
+  <header class="col-md-offset-3">
+    <h1>Welcome to my blog!</h1>
+
+    <p>This page is dedicated to my work and glorius statements. All Key supporters are super stoaked about the situation.</p>
+  </header>
+</div>
+<div class="row">
+  <?php
+
+$website = new Page;
+$website->showArticles($conn);
+
+  ?>
+</div>
 
   <div class="row">
-    <div class="col-md-1 col-xs-1"></div>
 
-    <div class="col-md-10 col-xs-10">
+
+    <div class="col-md-6 col-md-offset-3 col-xs-offset-1">
       <form action="saveArticle.php" method="get">
         <div class="form-group">
           <label for="title">Title</label>
@@ -46,12 +67,27 @@ include 'databaseConnection.php';
       </form>
 
     </div>
-    <div class="col-md-1 col-xs-1"></div>
+
   </div>
   <script >
 
     CKEDITOR.replace('editor1');
 
   </script>
+
+<div id="footer">
+  h
+  <form class="navbar-form navbar-left" role="search">
+  <h3>Administration</h3>
+  <div class="form-group">
+    <input type="username" class="form-control" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+</div>
 </body>
 </html>

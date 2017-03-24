@@ -1,15 +1,15 @@
 <?php
-include ('databaseConnection.php');
-echo $servername;
+//include ('databaseConnection.php');
+//echo $servername;
 class Article
 {
   //properties
 
-  public $id = null;
-  public $dateCreated = null;
-  public $dateUpdated = null;
-  public $article = null;
-  public $title = null;
+  public $id;
+  public $dateCreated;
+  public $dateUpdated;
+  public $article;
+  public $title;
   public $querry;
 
 public function insertArticle ($conn,$title, $text) {
@@ -23,13 +23,22 @@ public function insertArticle ($conn,$title, $text) {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
 
+                  }
 
+
+public function displayArticle () {
+  echo '<div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+        <div class="panel panel-default">
+        <div class="panel-heading">'.$this->title.'</div>
+        <div class="panel-body">
+        '.$this->article.'
+        </div>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+        </div>';
 }
-
-public function shwoArticles ($conn)
- $sql = "SELECT * FROM articles ORDER BY dateCreated" ;
- if ($conn->query($sql) === TRUE){
-                       echo "Success!";
-                   } else {
-                       echo "Error: " . $sql . "<br>" . $conn->error;
- ?>
+}
+?>
