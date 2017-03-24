@@ -26,5 +26,10 @@ public function insertArticle ($conn,$title, $text) {
 
 }
 
-}
+public function shwoArticles ($conn)
+ $sql = "SELECT * FROM articles ORDER BY dateCreated" ;
+ if ($conn->query($sql) === TRUE){
+                       echo "Success!";
+                   } else {
+                       echo "Error: " . $sql . "<br>" . $conn->error;
  ?>

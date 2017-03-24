@@ -16,10 +16,19 @@ include 'databaseConnection.php';
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
+  <h1>Welcome to my blog!</h1>
+
+  <p>This page is dedicated to my work and glorius statements. All Key supporters are super stoaked about the situation.</p>
+
+  
+
+
   <div class="row">
-    <div class="col-md-1 col-xs-1">.col-md-1</div>
+    <div class="col-md-1 col-xs-1"></div>
 
     <div class="col-md-10 col-xs-10">
       <form action="saveArticle.php" method="get">
@@ -28,13 +37,21 @@ include 'databaseConnection.php';
           <input type="text" name="title" class="form-control" id="title" placeholder="Title">
         </div>
 
-        <textarea name="text" class="form-control" rows="3"></textarea>
+        <textarea id="editor1" name="text" class="form-control" rows="3"></textarea>
+
+
+
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
     </div>
-    <div class="col-md-1 col-xs-1">.col-md-1</div>
+    <div class="col-md-1 col-xs-1"></div>
   </div>
+  <script >
+
+    CKEDITOR.replace('editor1');
+
+  </script>
 </body>
 </html>
