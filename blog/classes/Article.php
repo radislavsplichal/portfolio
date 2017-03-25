@@ -1,5 +1,5 @@
 <?php
-//include ('databaseConnection.php');
+include ('databaseConnection.php');
 //echo $servername;
 class Article
 {
@@ -40,5 +40,10 @@ public function displayArticle () {
         <div class="col-md-1"></div>
         </div>';
 }
+
+
+
+
+
 }
 ?>

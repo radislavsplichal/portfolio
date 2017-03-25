@@ -1,7 +1,25 @@
-<?php //echo "hello world";
-include 'databaseConnection.php';
+<?php
+//echo "hello world";
+//include 'databaseConnection.php';
+
+if (!isset($_SESSION['username'])){
+session_start();
+echo "Seesion started";
+}
+
 include 'classes/Article.php';
-include 'classes/Page.php'
+include 'classes/Page.php';
+
+if (isset($_SESSION['username'])) {
+  echo "You are logged in!";
+  ?>
+  <script>
+    $ ( "#login" ).hide("slow");
+  </script
+  <?php
+}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,12 +39,6 @@ include 'classes/Page.php'
   <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
-<style>
-#footer {
-  background-color: black;
-}
-</style>
-
 
 
 
@@ -75,17 +87,17 @@ $website->showArticles($conn);
 
   </script>
 
-<div id="footer">
-  h
-  <form class="navbar-form navbar-left" role="search">
+
+<div id="login">
+  <form method="POST" action="login.php" class="navbar-form navbar-left" >
   <h3>Administration</h3>
   <div class="form-group">
-    <input type="username" class="form-control" placeholder="Username">
+    <input name="username" type="text" class="form-control" placeholder="Username">
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" placeholder="Password">
+    <input name="password" type="password" class="form-control" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">Login</button>
 </form>
 </div>
 </div>

@@ -26,5 +26,23 @@ public function showArticles ($conn){
     echo "No Articles in the database";
   }
 }
+
+public function login ($conn, $user, $pass){
+
+  if ($user == "admin" && $pass == "mirus"){
+                 $_SESSION['valid'] = true;
+                 $_SESSION['timeout'] = time();
+                 $_SESSION['username'] = 'admin';
+
+                 echo 'You have entered valid use name and password';
+              }else {
+                 $msg = 'Wrong username or password';
+              }
+  }
+
+
 }
+
+
+
 ?>
