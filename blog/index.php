@@ -4,8 +4,12 @@
 include 'classes/Article.php';
 include 'classes/Page.php';
 
+
+
+
 $website = new Page;
 $website->displayLogin();
+$website->showArticles($conn);
 //echo "hello world";
 //include 'databaseConnection.php';
 
@@ -92,7 +96,17 @@ $website->displayLogin();
 <div class="row">
 
   <?php
-$website->showArticles($conn);
+
+  if (isset($_SESSION['state']) && $_SESSION['state']=='edit') {
+    $website->displayEditMode($_SESSION['focus']);
+
+  } else {
+  //$website->showArticles($conn);
+  foreach ($website->articles as $value) {
+    //var_dump ($value);
+    $value->displayArticle();
+  }
+  }
   ?>
 
 </div>

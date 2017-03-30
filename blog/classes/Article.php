@@ -27,7 +27,7 @@ public function insertArticle ($conn,$title, $text) {
 
 
 public function displayArticle () {
-  echo '<div class="row">
+  echo '<div id="'.$this->id.'" class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
         <div class="panel panel-default">
@@ -39,7 +39,7 @@ public function displayArticle () {
           </form>
           <form method="POST" action="editArticle.php">
             <input type="hidden" name="id" value='.$this->id.'></input>
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            <span onClick="this.parentNode.submit();" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
           </form>
           </div>
           </div>
@@ -65,9 +65,8 @@ public function destroyArticle($conn, $id){
 
 public function editArticle($conn, $id, $article, $title){
 $date = date('d.m.Y');
-$sql = "UPDATE articles(article, dateUpdated, title) WHERE id ='$id'
-VALUES ('$article', NOW(),'$date', '$title')
-";
+$sql = "UPDATE articles
+SET article='$article', dateUpdated='$date', title ='$title' WHERE id ='$id'";
 
 if ($conn->query($sql) === TRUE){
                       echo "Success! Article Updated!";
@@ -82,5 +81,5 @@ if ($conn->query($sql) === TRUE){
 
 
 
-}
+
 ?>

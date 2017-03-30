@@ -3,12 +3,13 @@ session_start();
 class Page {
 
 public $articleCount;
+public $articles = array();
 
 public function showArticles ($conn){
   $sql = "SELECT * FROM articles ORDER BY dateCreated";
 
   $result = $conn->query($sql);
-  $articles = array();
+  //$articles = array();
   $i = 0;
   if ($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
@@ -20,10 +21,10 @@ public function showArticles ($conn){
       $article->dateCreated = $row["dateCreated"];
       $article->dateUpdated = $row["dateUpdated"];
       $article->title = $row["title"];
-      $article->displayArticle();
+      //$article->displayArticle();
 
-      // $articles[i]= $article;
-      // $i++;
+      $this->articles[$row["id"]] = $article;
+      $i++;
 
     }
 
@@ -79,6 +80,40 @@ public function login ($conn, $user, $pass){
 
 
   }
+
+public function displayEditMode($id) {
+
+$articleToEdit = $this->articles[$id];
+//var_dump($this->articles[$id]);
+  echo '
+  <div id="newArticleForm" class="col-md-6 col-md-offset-3 col-xs-offset-1">
+    <form action="editArticle.php" method="POST">
+      <input name="id" type="hidden" value="'.$id.'"></input>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Title" value="'.$articleToEdit->title.'" >
+      </div>
+
+      <textarea id="editor1" name="article" class="form-control" rows="3" >'.$articleToEdit->article.'</textarea>
+
+
+
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+</div>
+<script >
+
+  CKEDITOR.replace("editor1");
+
+</script>
+';
+
+}
+
 
 }
 
