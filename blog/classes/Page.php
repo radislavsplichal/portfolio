@@ -21,8 +21,9 @@ public function showArticles ($conn){
       $article->dateUpdated = $row["dateUpdated"];
       $article->title = $row["title"];
       $article->displayArticle();
-      $articles[i]= $article;
-      i++;
+
+      // $articles[i]= $article;
+      // $i++;
 
     }
 

@@ -33,8 +33,14 @@ public function displayArticle () {
         <div class="panel panel-default">
         <div class="panel-heading"><b>'.$this->title.'</b> '.$this->dateCreated.' <i>'.$this->author.'</i>
           <div class="administration">
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <form method="POST" action="deleteArticle.php">
+            <input type="hidden" name="id" value='.$this->id.'></input>
+            <span onClick="this.parentNode.submit();" type="submit" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </form>
+          <form method="POST" action="editArticle.php">
+            <input type="hidden" name="id" value='.$this->id.'></input>
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          </form>
           </div>
           </div>
         <div class="panel-body">
@@ -46,7 +52,33 @@ public function displayArticle () {
         </div>';
 }
 
+public function destroyArticle($conn, $id){
+ $sql = "DELETE FROM articles WHERE id ='$id' ";
+  if ($conn->query($sql) === TRUE){
+                        echo "Success! Article Deleted!";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
 
+                  }
+
+
+public function editArticle($conn, $id, $article, $title){
+$date = date('d.m.Y');
+$sql = "UPDATE articles(article, dateUpdated, title) WHERE id ='$id'
+VALUES ('$article', NOW(),'$date', '$title')
+";
+
+if ($conn->query($sql) === TRUE){
+                      echo "Success! Article Updated!";
+                  } else {
+                      echo "Error: " . $sql . "<br>" . $conn->error;
+                  }
+
+                }
+
+
+}
 
 
 
