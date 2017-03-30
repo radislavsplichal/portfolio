@@ -31,16 +31,21 @@ public function displayArticle () {
         <div class="col-md-1"></div>
         <div class="col-md-10">
         <div class="panel panel-default">
-        <div class="panel-heading"><b>'.$this->title.'</b> '.$this->dateCreated.' <i>'.$this->author.'</i>
+        <div class="panel-heading"><b>'.$this->title.'</b>
+        <div class="btn-group" role="group" aria-label="...">
+        <form method="POST" action="editArticle.php">
+          <input type="hidden" name="id" value='.$this->id.'></input>
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </form>
+        <input type="hidden" name="id" value='.$this->id.'></input>
+          <span onClick="this.parentNode.submit();" type="submit" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </form>
+        </div>
+        </br>
+        Author: <i>'.$this->author.'</i></br>
+        Created: '.$this->dateCreated.'
           <div class="administration">
           <form method="POST" action="deleteArticle.php">
-            <input type="hidden" name="id" value='.$this->id.'></input>
-            <span onClick="this.parentNode.submit();" type="submit" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-          </form>
-          <form method="POST" action="editArticle.php">
-            <input type="hidden" name="id" value='.$this->id.'></input>
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-          </form>
           </div>
           </div>
         <div class="panel-body">
