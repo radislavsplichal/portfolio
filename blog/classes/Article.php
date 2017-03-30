@@ -31,17 +31,16 @@ public function displayArticle () {
         <div class="col-md-1"></div>
         <div class="col-md-10">
         <div class="panel panel-default">
-        <div class="panel-heading"><b>'.$this->title.'</b>
-        <div style="display: inline;" class="administration button-group" role="group" aria-label="...">
-        <form method="POST" action="deleteArticle.php">
+        <div style="display: inline;" class="administration button-group pull-right" role="group" aria-label="...">
+        <form method="POST" action="deleteArticle.php" role="button">
           <input type="hidden" name="id" value='.$this->id.'></input>
           <button type="button" onClick="this.parentNode.submit();" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-        </form><form method="POST" action="editArticle.php">
+        </form><form method="POST" action="editArticle.php" role="button">
           <input type="hidden" name="id" value='.$this->id.'></input>
           <button type="button" onClick="this.parentNode.submit();" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
         </form>
         </div>
-
+        <div class="panel-heading"><b>'.$this->title.'</b></br>
         Author: <i>'.$this->author.'</i></br>
         Created: '.$this->dateCreated.'
 
