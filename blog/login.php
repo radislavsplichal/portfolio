@@ -11,6 +11,7 @@ echo $pass;
 $page = new Page;
 $page->login($conn, $user, $pass);
 
+
 header("Location:"."index.php");
 exit();
 ?>

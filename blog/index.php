@@ -1,26 +1,23 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <?php
-//echo "hello world";
-//include 'databaseConnection.php';
-
-if (!isset($_SESSION['username'])){
-session_start();
-echo "Seesion started";
-}
-
+//session_start();
 include 'classes/Article.php';
 include 'classes/Page.php';
 
-if (isset($_SESSION['username'])) {
-  echo "You are logged in!";
-  echo '<html>
-        <script>
-          $("#login").hide(1000);
-        </script>
-      </html>';
+$website = new Page;
+$website->displayLogin();
+//echo "hello world";
+//include 'databaseConnection.php';
 
+if (isset($_SESSION['username'])){
 
-
+echo $_SESSION['username'];
 }
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +29,7 @@ if (isset($_SESSION['username'])) {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -40,12 +37,16 @@ if (isset($_SESSION['username'])) {
   <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
-  <script>
-    $("form").hide(1000);
-  </script>
+  <!-- <script>
+  $(document).ready(function(){
+    $("#login").remove();
 
+  });
 
-
+  </script> -->
+<form id="logout" action="unlogin.php">
+<button type="submit" class="btn btn-default">Logout</button>
+</form>
   <div class="container">
   <div class="row">
   <header class="col-md-offset-3">
@@ -57,7 +58,7 @@ if (isset($_SESSION['username'])) {
 <div class="row">
   <?php
 
-$website = new Page;
+
 $website->showArticles($conn);
 
   ?>
@@ -66,7 +67,7 @@ $website->showArticles($conn);
   <div class="row">
 
 
-    <div class="col-md-6 col-md-offset-3 col-xs-offset-1">
+    <div id="newArticleForm" class="col-md-6 col-md-offset-3 col-xs-offset-1">
       <form action="saveArticle.php" method="get">
         <div class="form-group">
           <label for="title">Title</label>

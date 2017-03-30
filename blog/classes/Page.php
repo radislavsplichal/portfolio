@@ -1,4 +1,5 @@
 <?php
+session_start();
 class Page {
 
 public $articleCount;
@@ -40,9 +41,39 @@ public function login ($conn, $user, $pass){
               }
   }
 
+public function displayLogin () {
+
+  if (isset($_SESSION['username'])) {
+    echo "You are logged in!";
+    echo '  <script>
+      $(document).ready(function(){
+        $("#login").hide();
+        $("#newArticleForm").show();
+        $("#logout").show();
+      });
+
+
+      </script>';
+
+
+
+  } else {
+    echo '  <script>
+      $(document).ready(function(){
+        $("#login").show();
+        $("#newArticleForm").hide();
+        $("#logout").hide();
+      });
+
+
+      </script>';
 
 }
 
+
+}
+
+}
 
 
 ?>
