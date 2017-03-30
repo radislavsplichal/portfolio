@@ -8,7 +8,8 @@ public function showArticles ($conn){
   $sql = "SELECT * FROM articles ORDER BY dateCreated";
 
   $result = $conn->query($sql);
-
+  $articles = array();
+  $i = 0;
   if ($result->num_rows > 0){
     while($row = $result->fetch_assoc()) {
       //print_r($row);
@@ -20,6 +21,9 @@ public function showArticles ($conn){
       $article->dateUpdated = $row["dateUpdated"];
       $article->title = $row["title"];
       $article->displayArticle();
+      $articles[i]= $article;
+      i++;
+
     }
 
   } else {
@@ -44,12 +48,13 @@ public function login ($conn, $user, $pass){
   public function displayLogin () {
 
     if (isset($_SESSION['username'])) {
-      echo "You are logged in!";
+      //echo "You are logged in!";
       echo '  <script>
       $(document).ready(function(){
         $("#login").hide();
         $("#newArticleForm").show();
         $("#logout").show();
+        $(".administration").show();
       });
 
 
@@ -63,6 +68,7 @@ public function login ($conn, $user, $pass){
         $("#login").show();
         $("#newArticleForm").hide();
         $("#logout").hide();
+        $(".administration").hide();
       });
 
 

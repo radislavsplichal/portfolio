@@ -9,10 +9,10 @@ $website->displayLogin();
 //echo "hello world";
 //include 'databaseConnection.php';
 
-if (isset($_SESSION['username'])){
-
-echo $_SESSION['username'];
-}
+// if (isset($_SESSION['username'])){
+//
+// echo $_SESSION['username'];
+// }
 
 
 
@@ -71,8 +71,10 @@ echo $_SESSION['username'];
           </form>
         </li>
           <li id="logout">
-            <form action="unlogin.php">
-              <button type="submit" class="btn btn-default">Logout</button>
+            <form action="unlogin.php" class="navbar-form navbar-left">
+              <div class="form-group">
+                <button type="submit" class="btn btn-default">Logout</button>
+              </div>
             </form>
           </li>
         </ul>
