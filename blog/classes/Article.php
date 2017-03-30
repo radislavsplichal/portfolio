@@ -31,7 +31,7 @@ public function displayArticle () {
         <div class="col-md-1"></div>
         <div class="col-md-10">
         <div class="panel panel-default">
-        <div class="panel-heading">'.$this->title.'</div>
+        <div class="panel-heading"><b>'.$this->title.'</b> '.$this->dateCreated.' <i>'.$this->author.'</i></div>
         <div class="panel-body">
         '.$this->article.'
         </div>
