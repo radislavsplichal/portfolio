@@ -23,7 +23,7 @@ echo $_SESSION['username'];
 <html>
 <head>
   <meta charset="utf-8">
-  <title>My Homepage</title>
+  <title>My Blog</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -44,9 +44,41 @@ echo $_SESSION['username'];
   });
 
   </script> -->
-<form id="logout" action="unlogin.php">
-<button type="submit" class="btn btn-default">Logout</button>
-</form>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Blog</a>
+      </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="login">
+            <form method="POST" action="login.php" class="navbar-form navbar-left" >
+            <div class="form-group">
+              <input name="username" type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+          </form>
+        </li>
+          <li id="logout">
+            <form action="unlogin.php">
+              <button type="submit" class="btn btn-default">Logout</button>
+            </form>
+          </li>
+        </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+
   <div class="container">
   <div class="row">
   <header class="col-md-offset-3">
@@ -56,12 +88,11 @@ echo $_SESSION['username'];
   </header>
 </div>
 <div class="row">
+
   <?php
-
-
 $website->showArticles($conn);
-
   ?>
+
 </div>
 
   <div class="row">
@@ -91,19 +122,6 @@ $website->showArticles($conn);
 
   </script>
 
-
-<div id="login">
-  <form method="POST" action="login.php" class="navbar-form navbar-left" >
-  <h3>Administration</h3>
-  <div class="form-group">
-    <input name="username" type="text" class="form-control" placeholder="Username">
-  </div>
-  <div class="form-group">
-    <input name="password" type="password" class="form-control" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Login</button>
-</form>
-</div>
 </div>
 </body>
 </html>
