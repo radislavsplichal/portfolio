@@ -12,14 +12,15 @@ include 'classes/Page.php';
 
 if (isset($_SESSION['username'])) {
   echo "You are logged in!";
-  ?>
-  <script>
-    $ ( "#login" ).hide("slow");
-  </script
-  <?php
+echo '<html>
+        <script>
+          $ ( "#login" ).hide("slow");
+        </script
+      </html>';
+
+
+
 }
-
-
 ?>
 <!DOCTYPE html>
 <html>

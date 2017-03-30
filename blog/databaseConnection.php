@@ -9,9 +9,9 @@ define( "HOMEPAGE_NUM_ARTICLES", 5 );
 
 
 
-$servername = "localhost";
+$servername = "89.239.10.163";
 $username = "blogger";
-$password = "DIh622wBsQ0QYfJ3";
+$password = "pJOToXed0MzjySW7";
 $dbname = "radislavsplichal";
 
 // Create connection
