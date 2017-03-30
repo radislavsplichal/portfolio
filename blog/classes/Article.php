@@ -32,19 +32,16 @@ public function displayArticle () {
         <div class="col-md-10">
         <div class="panel panel-default">
         <div class="panel-heading"><b>'.$this->title.'</b>
-        <div class="administration">
+        <div style="display: inline;" class="administration button-group" role="group" aria-label="...">
         <form method="POST" action="deleteArticle.php">
-
           <input type="hidden" name="id" value='.$this->id.'></input>
-          <span onClick="this.parentNode.submit();" type="submit" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </form>
-        <form method="POST" action="editArticle.php">
+          <button type="button" onClick="this.parentNode.submit();" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
+        </form><form method="POST" action="editArticle.php">
           <input type="hidden" name="id" value='.$this->id.'></input>
-          <span onClick="this.parentNode.submit();" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          <button type="button" onClick="this.parentNode.submit();" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
         </form>
-
         </div>
-        </br>
+
         Author: <i>'.$this->author.'</i></br>
         Created: '.$this->dateCreated.'
 

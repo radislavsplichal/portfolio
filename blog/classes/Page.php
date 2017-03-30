@@ -86,7 +86,7 @@ public function displayEditMode($id) {
 $articleToEdit = $this->articles[$id];
 //var_dump($this->articles[$id]);
   echo '
-  <div id="newArticleForm" class="col-md-6 col-md-offset-3 col-xs-offset-1">
+  <div id="editArticleForm" class="col-md-6 col-md-offset-3 col-xs-offset-1">
     <form action="editArticle.php" method="POST">
       <input name="id" type="hidden" value="'.$id.'"></input>
       <div class="form-group">
@@ -112,8 +112,30 @@ $articleToEdit = $this->articles[$id];
 </script>
 ';
 
-}
+ if (isset($_SESSION['state']) && $_SESSION['state'] == 'edit') {
+    //echo "You are logged in!";
+    echo '  <script>
+    $(document).ready(function(){
+      $("#editArticleForm").show();
+      $("#newArticleForm").hide();
+    });
 
+
+    </script>';
+
+  } else {
+    echo '  <script>
+    $(document).ready(function(){
+      $("#editArticleForm").hide();
+      $("#newArticleForm").show();
+    });
+
+
+    </script>';
+
+  }
+
+}
 
 }
 
