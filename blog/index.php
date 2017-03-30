@@ -19,9 +19,6 @@ $website->showArticles($conn);
 // }
 
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +30,6 @@ $website->showArticles($conn);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- jQuery library -->
-
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -59,9 +55,14 @@ $website->showArticles($conn);
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Blog</a>
+        <a class="navbar-brand glyphicon glyphicon-home" href="landingPage.php"></a>
       </div>
 
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Shopping List</a></li>
+          </ul>
         <ul class="nav navbar-nav navbar-right">
           <li id="login">
             <form method="POST" action="login.php" class="navbar-form navbar-left" >
@@ -82,12 +83,14 @@ $website->showArticles($conn);
             </form>
           </li>
         </ul>
+      </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 
+
   <div class="container">
   <div class="row">
-  <header class="col-md-offset-3">
+  <header class="col-xs-12 col-sm-12 col-md-12 text-center">
     <h1>Welcome to my blog!</h1>
 
     <p>This page is dedicated to my work and glorius statements. All Key supporters are super stoaked about the situation.</p>
@@ -114,10 +117,10 @@ $website->showArticles($conn);
   <div class="row">
 
 
-    <div id="newArticleForm" class="col-md-6 col-md-offset-3 col-xs-offset-1">
+    <div id="newArticleForm" class="col-md-6 col-md-offset-2 col-xs-offset-1">
       <form action="saveArticle.php" method="get">
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title">Add a new article</label>
           <input type="text" name="title" class="form-control" id="title" placeholder="Title">
         </div>
 
