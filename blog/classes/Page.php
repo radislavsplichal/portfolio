@@ -41,11 +41,11 @@ public function login ($conn, $user, $pass){
               }
   }
 
-public function displayLogin () {
+  public function displayLogin () {
 
-  if (isset($_SESSION['username'])) {
-    echo "You are logged in!";
-    echo '  <script>
+    if (isset($_SESSION['username'])) {
+      echo "You are logged in!";
+      echo '  <script>
       $(document).ready(function(){
         $("#login").hide();
         $("#newArticleForm").show();
@@ -57,8 +57,8 @@ public function displayLogin () {
 
 
 
-  } else {
-    echo '  <script>
+    } else {
+      echo '  <script>
       $(document).ready(function(){
         $("#login").show();
         $("#newArticleForm").hide();
@@ -68,10 +68,10 @@ public function displayLogin () {
 
       </script>';
 
-}
+    }
 
 
-}
+  }
 
 }
 
