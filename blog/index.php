@@ -60,8 +60,8 @@ $website->showArticles($conn);
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Shopping List</a></li>
+            <li><a href="http://radislavsplichal.cz/portfolio">About me</a></li>
+            <li><a href="http://radislavsplichal.cz/website">Shopping List</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
           <li id="login">
