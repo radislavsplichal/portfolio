@@ -17,7 +17,7 @@
           <div class="caption">
             <h3>My Blog</h3>
             <p>My Blog app where I add some interesting thoughts and my hobbies in general. DFTBA!</p>
-            <p><a href="blog.php" class="btn btn-primary" role="button">Read</a> </p>
+            <p><a href="router.php?activePage=2" class="btn btn-primary" role="button">Read</a> </p>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
           <div class="caption">
             <h3>Shopping List Prewiew App</h3>
             <p>This is a familly friendly app designed never ever to forget what you need to buy at the grocery store.</p>
-            <p><a href="shoppingList/index.php" class="btn btn-primary" role="button">Check Out!</a> </p>
+            <p><a href="router.php?activePage=3" class="btn btn-primary" role="button">Check Out!</a> </p>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <div class="caption">
             <h3>My CV</h3>
             <p>Some basic info about me. I am looking for a summer job now, if you like it. Please send me a message.</p>
-            <p><a href="cv.php" class="btn btn-primary" role="button">See</a> </p>
+            <p><a href="router.php?activePage=1" class="btn btn-primary" role="button">See</a> </p>
           </div>
         </div>
 
