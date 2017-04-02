@@ -56,17 +56,17 @@
           </div>
         </div>
 
-        <div class="row" name="edu">
-          <h2>My Education</h2>
+        <div class="row">
+          <h2 id="edu">My Education</h2>
           <ul>
             <li>2013 - now Technical University of Liberec - Faculty of Education - IT and English Language teaching</li>
             <li>2005 - 2013 Gymnazium Dr. Antona Randy, Jablonec nad Nisou</li>
           </ul>
         </div>
 
-        <div class="row" name="work">
+        <div class="row">
 
-          <h2>My work Experience</h2>
+          <h2 id="work">My work Experience</h2>
           <ul>
           <li><h3>IT consolutant and technitian at Arcade Europe</h3>
           (My responsibility is the IT infrastructure at the company, building Arcade Machines, solving technical issues.)</li>
@@ -80,8 +80,8 @@
         </div>
 
 
-        <div class="row" name="skills">
-          <h2>Skills</h2>
+        <div class="row">
+          <h2 id="skills">Skills</h2>
           <h3>Language Skills</h3>
           <ul>
           <li>English Language - Fluent -C1</li>
@@ -104,17 +104,15 @@
         </ul>
       </div>
 
-        <div class="row" name="hobb">
-          <h2>My traits</h2>
+        <div class="row">
+          <h2 id="traits">My traits</h2>
         </div>
 
-        <div class="row" name="hobb">
-          <h2>My hobbies</h2>
+        <div class="row">
+          <h2 id="hobb">My hobbies</h2>
         </div>
 
-          <b>Last Update 3.11.2017</b>
         </div>
-
       </div>
   </section>
 
