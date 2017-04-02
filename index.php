@@ -1,6 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <?php
-//session_start();
+// session_start();
 include 'classes/Article.php';
 include 'classes/Page.php';
 //include 'router.php';
@@ -56,7 +56,7 @@ $website->showArticles($conn);
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand glyphicon glyphicon-home" href="router.php?activePage=0"></a>
+        <a class="navbar-brand glyphicon glyphicon-home" href="router.php?activePage=10"></a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -91,21 +91,24 @@ $website->showArticles($conn);
 
 
   <div class="container">
-    <?php if(isset($_SESSION['activePage'])){
-      switch ($_SESSION['activePage']) {
-          case 0:
-              include 'landingPage.php';
-              break;
-          case 1:
-              include 'cv.php';
-              break;
-          case 2:
-              include 'blog.php';
-              break;
-          case 3:
-              include 'shoppingList.php';
-              break;
-      }
+    <?php
+//echo $_SESSION['activePage'];
+    if(isset($_SESSION['activePage'])){
+      //echo $_SESSION['activePage'];
+              switch ($_SESSION['activePage']) {
+                case 10:
+                    include 'landingPage.php';
+                    break;
+                case 1:
+                    include 'cv.php';
+                    break;
+                case 2:
+                    include 'blog.php';
+                    break;
+                case 3:
+                    include 'shoppingList.php';
+                    break;
+            }
 
 
 
