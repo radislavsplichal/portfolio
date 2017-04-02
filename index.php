@@ -106,7 +106,7 @@ $website->showArticles($conn);
                     include 'blog.php';
                     break;
                 case 3:
-                    include 'shoppingList.php';
+                    include 'shoppingList/index.php';
                     break;
             }
 
