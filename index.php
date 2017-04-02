@@ -154,7 +154,7 @@ code {
 </style>
     <footer class="footer">
           <div class="container">
-            <p class="text-muted">Place sticky footer content here.</p>
+            <p class="text-muted">This Web is the creation of Radislav Splichal. All Rights Reserverd. This Webpage in order to function properly in 2017 uses Cookies. </p>
           </div>
         </footer>
 
