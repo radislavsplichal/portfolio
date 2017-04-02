@@ -67,10 +67,10 @@ $website->showArticles($conn);
           <li id="login">
             <form method="POST" action="login.php" class="navbar-form navbar-left" >
             <div class="form-group">
-              <input name="username" type="text" class="form-control" placeholder="Username">
+              <input name="username" type="text" class="form-control" placeholder="Username" required>
             </div>
             <div class="form-group">
-              <input name="password" type="password" class="form-control" placeholder="Password">
+              <input name="password" type="password" class="form-control" placeholder="Password" required>
             </div>
             <button type="submit" class="btn btn-default">Login</button>
           </form>
@@ -121,7 +121,7 @@ $website->showArticles($conn);
       <form action="saveArticle.php" method="get">
         <div class="form-group">
           <label for="title">Add a new article</label>
-          <input type="text" name="title" class="form-control" id="title" placeholder="Title">
+          <input type="text" name="title" class="form-control" id="title" placeholder="Title" required>
         </div>
 
         <textarea id="editor1" name="text" class="form-control" rows="3"></textarea>
@@ -141,6 +141,10 @@ $website->showArticles($conn);
 
   </script>
 
+</div>
+<div class="panel  col-md-12 col-xs-12">
+
+  <div class="panel-footer">Panel footer</div>
 </div>
 </body>
 </html>
