@@ -1,5 +1,5 @@
 <?php
-include 'databaseConnection.php';
+include 'shoppingList/databaseConnection.php';
 
 ?>
 <!-- // end -->
