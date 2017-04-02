@@ -25,24 +25,22 @@
 
 
         <div class="row">
-
-
             <h1>Radislav Splichal</h1>
 
-
-
-          <div class="col-xs-6 col-md-4 col-md-8">
+            <div class="container">
+          <div class="col-sm-6 col-md-12">
             <img class="thumbnail img-responsive" alt="Me" src="profilePhoto.jpg">
           </div>
-          <div class="col-xs-6 col-md-4col-md-8">
+          <div class="col-sm-6 col-md-12">
             <ul>
               <li>Born: 31.1.1994 Jablonec nad Nisou</li>
-              <li>Phone: +420 604 973 658 // Note to hide?</li>
+              <li>Phone: +420 604 973 658</li>
               <li>E-mail: radislavsplichal@gmail.com</li>
             </ul>
-            </p>
           </div>
-          </div>
+        </div>
+      </div>
+
           <div class="row">
         </div>
         </header>
@@ -67,26 +65,31 @@
         </div>
 
         <div class="row" name="work">
+
           <h2>My work Experience</h2>
+          <ul>
+          <li><h3>IT consolutant and technitian at Arcade Europe</h3>
+          (My responsibility is the IT infrastructure at the company, building Arcade Machines, solving technical issues.)</li>
 
-          <h3>IT consolutant and technitian at Arcade Europe</h3>
-          (My responsibility is the IT infrastructure at the company, building Arcade Machines, solving technical issues.)
+          <li><h3>Tuition at Amina o.p.s.</h3>
+          (Teaching Children Mathematics, Physics and English at elementary and secondary level.)</li>
 
-          <h3>Tuition at Amina o.p.s.</h3>
-          (Teaching Children Mathematics, Physics and English at elementary and secondary level.)
-
-          <h3>ABB s.r.o., Elektro-Praga</h3>
-          (Summer job as an assemnbly worker.)
+          <li><h3>ABB s.r.o., Elektro-Praga</h3>
+          (Summer job as an assemnbly worker.)</li>
+        </ul>
         </div>
+
 
         <div class="row" name="skills">
-          <h2>Language Skills</h3>
-          English Language - Fluent -C1<br>
-          German Language - Comunicative level - B1
-        </div>
+          <h2>Skills</h2>
+          <h3>Language Skills</h3>
+          <ul>
+          <li>English Language - Fluent -C1</li>
+          <li>German Language - Comunicative level - B1</li>
+          </ul>
 
-        <div class="row">
-          <h2>Computer Skills</h3>
+
+          <h3>Computer Skills</h3>
         <ul>
           <li>Windows (all NT versions), Ubuntu/Linux, OS X, Android, IOS,</li>
           <li>MS Office (Word, Excel, PowerPoint) – Intermediate</li>
@@ -95,23 +98,25 @@
           <li>Gimp - User</li>
           <li>Inkscape - User</li>
         </ul>
+        <h3>Driver's licence</h3>
+        <ul>
+        <li>Group B - active driver</li>
+        </ul>
+      </div>
+
+        <div class="row" name="hobb">
+          <h2>My traits</h2>
         </div>
 
-        <div class="row">
-          Drivers License group - active driver
-
-          <h2>My traits</h2>
-
+        <div class="row" name="hobb">
           <h2>My hobbies</h2>
+        </div>
 
           <b>Last Update 3.11.2017</b>
         </div>
 
       </div>
-    </div>
   </section>
-
-</div>
 
 
 </body>
