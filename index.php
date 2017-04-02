@@ -117,7 +117,8 @@ $website->showArticles($conn);
     }
     ?>
 </div>
-<div class="panel  col-md-12 col-xs-12">
+
+<div class="col-md-12 col-xs-12">
 
   <div class="panel-footer">Panel footerus</div>
 </div>

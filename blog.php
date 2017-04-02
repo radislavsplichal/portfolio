@@ -100,9 +100,6 @@ $website->showArticles($conn);
   </script>
 
 </div>
-<div class="panel  col-md-12 col-xs-12">
 
-  <div class="panel-footer">Panel footer</div>
-</div>
 </body>
 </html>
