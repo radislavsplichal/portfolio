@@ -27,7 +27,7 @@
           <div class="caption">
             <h3>Shopping List Prewiew App</h3>
             <p>This is a familly friendly app designed never ever to forget what you need to buy at the grocery store.</p>
-            <p><a href="../website/index.php" class="btn btn-primary" role="button">Check Out!</a> </p>
+            <p><a href="http://www.radislavsplichal.cz/website" class="btn btn-primary" role="button">Check Out!</a> </p>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <div class="caption">
             <h3>My CV</h3>
             <p>Some basic info about me. I am looking for a summer job now, if you like it. Please send me a message.</p>
-            <p><a href="/index.php" class="btn btn-primary" role="button">See</a> </p>
+            <p><a href="portfolio/index.html" class="btn btn-primary" role="button">See</a> </p>
           </div>
         </div>
 
