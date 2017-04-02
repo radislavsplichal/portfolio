@@ -1,49 +1,99 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<?php
+//session_start();
+include 'classes/Article.php';
+include 'classes/Page.php';
+
+
+
+
+$website = new Page;
+$website->displayLogin();
+$website->showArticles($conn);
+//echo "hello world";
+//include 'databaseConnection.php';
+
+// if (isset($_SESSION['username'])){
+//
+// echo $_SESSION['username'];
+// }
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>My Pages</title>
+  <title>Portfolio</title>
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
+  <!-- <script>
+  $(document).ready(function(){
+    $("#login").remove();
+
+  });
+
+  </script> -->
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand glyphicon glyphicon-home" href="../index.php"></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../portfolio/index.php">About me</a></li>
+            <li><a href="http://radislavsplichal.cz/website">Shopping List</a></li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="login">
+            <form method="POST" action="login.php" class="navbar-form navbar-left" >
+            <div class="form-group">
+              <input name="username" type="text" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+          </form>
+        </li>
+          <li id="logout">
+            <form action="unlogin.php" class="navbar-form navbar-left">
+              <div class="form-group">
+                <button type="submit" class="btn btn-default">Logout</button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/587278/images/3081011/3840x2160-cpu_hardware-28156.jpg" alt="...">
-          <div class="caption">
-            <h3>My Blog</h3>
-            <p>My Blog app where I add some interesting thoughts and my hobbies in general. DFTBA!</p>
-            <p><a href="blog/index.php" class="btn btn-primary" role="button">Read</a> </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="http://kingofwallpapers.com/tech/tech-007.jpg" alt="...">
-          <div class="caption">
-            <h3>Shopping List Prewiew App</h3>
-            <p>This is a familly friendly app designed never ever to forget what you need to buy at the grocery store.</p>
-            <p><a href="http://www.radislavsplichal.cz/website" class="btn btn-primary" role="button">Check Out!</a> </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="http://northbaynow.ca/wp-content/uploads/2016/05/tech.jpg" alt="...">
-          <div class="caption">
-            <h3>My CV</h3>
-            <p>Some basic info about me. I am looking for a summer job now, if you like it. Please send me a message.</p>
-            <p><a href="portfolio/index.html" class="btn btn-primary" role="button">See</a> </p>
-          </div>
-        </div>
 
-      </div>
+</div>
+<div class="panel  col-md-12 col-xs-12">
 
-    </div>
-  </div>
+  <div class="panel-footer">Panel footer</div>
+</div>
 </body>
 </html>
