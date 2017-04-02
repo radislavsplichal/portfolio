@@ -3,6 +3,7 @@
 //session_start();
 include 'classes/Article.php';
 include 'classes/Page.php';
+//include 'router.php';
 
 
 
@@ -60,7 +61,7 @@ $website->showArticles($conn);
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="../portfolio/index.php">About me</a></li>
+            <li><a href="router.php?activePage=1">About me</a></li>
             <li><a href="http://radislavsplichal.cz/website">Shopping List</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -89,7 +90,25 @@ $website->showArticles($conn);
 
 
   <div class="container">
+    <?php if(isset($_SESSION['activePage'])){
+      switch ($_SESSION['activePage']) {
+          case 1:
+              include 'cv.html';
+              break;
+          case 2:
+              include 'blog.php';
+              break;
+          case 3:
+              include 'website.php';
+              break;
+      }
 
+
+
+    }else {
+      include 'landingPage.php';
+    }
+    ?>
 </div>
 <div class="panel  col-md-12 col-xs-12">
 
