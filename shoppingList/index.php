@@ -169,9 +169,10 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
      ?>
-
+</table>
      </div>
      </p>
+</div>
 
 
     <div class="row col-sm-3 col-xs-0" ></div>
