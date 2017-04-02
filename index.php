@@ -56,14 +56,14 @@ $website->showArticles($conn);
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand glyphicon glyphicon-home" href="router.php?activePage=0"></a>
+        <a class="navbar-brand glyphicon glyphicon-home" href="../index.php"></a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="router.php?activePage=1">About me</a></li>
-            <li><a href="router.php?activePage=2">Blog</a></li>
-            <li><a href="router.php?activePage=3">Shopping List</a></li>
+            <li><a href="router.php?activePage=2">Shopping List</a></li>
+            <li><a href="router.php?activePage=3">Blog</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
           <li id="login">
@@ -93,17 +93,14 @@ $website->showArticles($conn);
   <div class="container">
     <?php if(isset($_SESSION['activePage'])){
       switch ($_SESSION['activePage']) {
-          case 0:
-              include 'landingPage.php';
-              break;
           case 1:
-              include 'cv.php';
+              include 'cv.html';
               break;
           case 2:
               include 'blog.php';
               break;
           case 3:
-              include 'shoppingList.php';
+              include 'website.php';
               break;
       }
 
