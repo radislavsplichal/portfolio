@@ -5,8 +5,9 @@ include 'classes/Article.php';
 include 'classes/Page.php';
 //include 'router.php';
 
-
-
+if (isset($_GET['activePage'])){
+$_SESSION['activePage'] = $_GET['activePage'];
+}
 
 $website = new Page;
 $website->displayLogin();
