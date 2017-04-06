@@ -3,6 +3,7 @@
 // session_start();
 include 'classes/Article.php';
 include 'classes/Page.php';
+include 'classes/User.php';
 //include 'router.php';
 
 if (isset($_GET['activePage'])){

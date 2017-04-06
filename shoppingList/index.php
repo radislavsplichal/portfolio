@@ -163,9 +163,20 @@ if ($result->num_rows > 0) {
 
 
 
+} else if ($result->num_rows == 0){
+
+
+
+
+    echo '<div class="alert alert-info">
+      <strong>Info!</strong> There are no lists and items currently in the database!
+    </div>';
+    //echo "Error: " . $sql . "<br>" . $conn->error;
 } else {
-    echo "0 results";
-    echo "Error: " . $sql . "<br>" . $conn->error;
+  //echo "Error: " . $sql . "<br>" . $conn->error;
+  echo '<div class="alert alert-danger">
+  <strong>Danger!</strong> Database connection is faulty!..Error:  '. $sql .' "<br>" '. $conn->error.'
+</div>';
 }
 $conn->close();
      ?>

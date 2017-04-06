@@ -1,15 +1,17 @@
 <?php
 include 'classes/Page.php';
 include 'databaseConnection.php';
-session_start();
+include 'classes/User.php';
+//session_start();
 
-$user = $_POST["username"];
+$userName = $_POST["username"];
 $pass = $_POST["password"];
-echo $user;
-echo $pass;
 
-$page = new Page;
-$page->login($conn, $user, $pass);
+// echo $user;
+// echo $pass;
+
+$user = new User;
+$user->login($conn, $userName, $pass);
 
 
 header("Location:"."index.php");
