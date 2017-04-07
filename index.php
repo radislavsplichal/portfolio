@@ -68,6 +68,22 @@ $website->showArticles($conn);
             <li><a href="router.php?activePage=3">Shopping List</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+
+
+              <?php
+              // status bar
+              //echo $_SESSION['status'];
+              if (isset($_SESSION['status'])){
+              include 'operations/status.php';
+              }
+                 ?>
+
+            
+
+
+
+          </li>
           <li id="login">
             <form method="POST" action="login.php" class="navbar-form navbar-left" >
             <div class="form-group">
@@ -94,6 +110,9 @@ $website->showArticles($conn);
 
   <div class="container">
     <?php
+
+
+    //routing switch
 //echo $_SESSION['activePage'];
     if(isset($_SESSION['activePage'])){
       //echo $_SESSION['activePage'];

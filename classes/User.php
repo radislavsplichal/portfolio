@@ -22,16 +22,21 @@ class User {
           $_SESSION['username'] = 'admin';
 
           echo 'You have entered valid use name and password';
+          if (isset($_SESSION['status'])){
+            unset($_SESSION['status']);
+          }
           break;
         }
         if (!isset($_SESSION['username'])) {
           echo "Username or password dont match our records";
+          $_SESSION['status']='badPswdOrUsr';
         }
 
       }
         } else {
           # code...
           echo "Ops. There is something wrong with the database!";
+          $_SESSION['status']='dbNotConn';
         }
 
       }

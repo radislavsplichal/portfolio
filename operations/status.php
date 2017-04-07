@@ -2,10 +2,12 @@
 
 // Error codes
 
-switch $_SESSION['error']{
+switch ($_SESSION['status']){
 
-case 'badPswd':
-  echo "The password you have entered is wrong!";
+case 'badPswdOrUsr':
+  echo '<div class="alert alert-danger navbar-form navbar-left">
+      <strong>Nope!</strong> The password or username you have entered is wrong!
+      </div>';
   break;
 case 'dbNotConn':
   echo "The connecntion to the database is not working properly, check the service!";
