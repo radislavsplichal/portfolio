@@ -16,7 +16,7 @@ class User {
         while ($row = $result->fetch_assoc()) {
           //if ($userName == $row["userName"]){echo "User Name mactch";}
           //if (password_verify('mirus',$row["password"])){echo 'Heslo je na Pizdec';}
-          if($userName == $row["userName"] && password_verify('mirus',$row["password"])){
+          if($userName == $row["userName"] && password_verify($password,$row["password"])){
           $_SESSION['valid'] = true;
           $_SESSION['timeout'] = time();
           $_SESSION['username'] = 'admin';
