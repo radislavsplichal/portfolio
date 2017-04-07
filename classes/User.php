@@ -1,5 +1,5 @@
 <?php
-
+// This class handles the users and login functionality
 class User {
     public $rights;
     public $firstName;

@@ -1,4 +1,6 @@
 <?php
+// This class is responsible for the allocation of the content from the database to the memmory
+// UI elements visibility is hadnled through this class as well
 session_start();
 class Page {
 
