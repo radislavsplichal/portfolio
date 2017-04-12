@@ -29,7 +29,7 @@
 
             <div class="container">
           <div class="col-sm-6 col-md-12">
-            <img class="thumbnail img-responsive" alt="Me" src="profilePhoto.jpg">
+            <img class="thumbnail img-responsive" alt="Me" src="media/profilePhoto.jpg">
           </div>
           <div class="col-sm-6 col-md-12">
             <ul>

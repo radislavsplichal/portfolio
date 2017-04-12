@@ -179,7 +179,7 @@ code {
 </style>
     <footer class="footer">
           <div class="container">
-            <p class="text-muted">This Web is the creation of Radislav Splichal. All Rights Reserverd. This Webpage in order to function properly in 2017 uses Cookies. </p>
+            <p class="text-muted text-center">This Web is the creation of Radislav Šplíchal. All Rights Reserverd. This Webpage in order to function properly in 2017. This Website uses Cookies. </p>
           </div>
         </footer>
 
