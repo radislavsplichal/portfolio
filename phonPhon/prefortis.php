@@ -5,16 +5,13 @@
 <head>
   <meta charset="utf-8">
   <title>Pre-fortis clipping</title>
-
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
   <!-- jQuery library -->
-
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
 
+  <script>
  function playSound (id){
    //alert(id);
     var audio = document.getElementById(id);
@@ -22,19 +19,33 @@
     //audio.load();
     audio.play();
  }
-
   </script>
 </head>
 
 <body>
-  <h1 class="text-center">Pre-fortis clipping</h1>
-<h2 class="text-center">PHP table</h2>
-  <div class="container">
 
+<h1 class="text-center">Pre-fortis clipping</h1>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h4>Definition:</h4></div>
+    <div class="panel-body">
+      <p>
+        <b>Pre-fortis clipping</b> is a phenomenon of the articulation of vowels before consonants. It can be shown that vowels are produced shorter ('clipped') if followed by fortis/voiceless consonants within the same syllable. Conversely, we could speak of <b>pre-lenis lengthening</b>, whereby a vowel is produced longer before lenis/voiced consonants. Compare, e.g. the length of the vowels in <i>bit</i> vs <i>bid</i>, and <i>bead</i> vs <i>beat</i>.
+      </p>
+      </div>
+    <div class="panel-footer"><p class="text-muted">Definition from: http://www.sz.uni-erlangen.de/abteilungen/medien/lorenz/phonetics_ws0708/definitions_phon</p></div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body text-center">
+      <p>
+        Click the word to play its pronunciation.<br>
+        Few words do not have appropriate recording attached to it, yet.<br>
+        If you can't hear sound after trying several words, adjust your audio settings in your device.
+      </p>
+      </div>
+  </div>
+</div>
 
-
-
-<h2 class="text-center">Classic, yet interractive and responsive, table</h2>
   <div class="container">
     <table class="table table-hover table-responsive table-bordered">
 
@@ -103,38 +114,16 @@
       <td></td>
       <td></td>
       <td><div onclick="playSound('league');">league <audio id="league"></audio></div></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>leak</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>leave</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>leaf</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>leas</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lease</td>
+      <td><div onclick="playSound('leak');">leak <audio id="leak"></audio></div></td>
+      <td><div onclick="playSound('leave');">leave <audio id="leave"></audio></div></td>
+      <td><div onclick="playSound('leaf');">leaf <audio id="leaf"></audio></div></td>
+      <td><div onclick="playSound('leas');">leas <audio id="leas"></audio></div></td>
+      <td><div onclick="playSound('lease');">lease <audio id="lease"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>me</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>mead</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>meat</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>pea</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>peed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>peat</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>peas</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>peace</td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>plea</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>plead</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>pleat</td>
+      <td><div onclick="playSound('me');">me <audio id="me"></audio></div></td>
+      <td><div onclick="playSound('mead');">mead <audio id="mead"></audio></div></td>
+      <td><div onclick="playSound('meat');">meat <audio id="meat"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -143,31 +132,20 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>see</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>seed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>seat</td>
+      <td><div onclick="playSound('pea');">pea <audio id="pea"></audio></div></td>
+      <td><div onclick="playSound('peed');">peed <audio id="peed"></audio></div></td>
+      <td><div onclick="playSound('peat');">peat <audio id="peat"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>seize</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>cease</td>
+      <td><div onclick="playSound('peas');">peas <audio id="peas"></audio></div></td>
+      <td><div onclick="playSound('peace');">peace <audio id="peace"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>she</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>she'd</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>sheet</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>tea</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>teed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>teat</td>
+      <td><div onclick="playSound('plea');">plea <audio id="plea"></audio></div></td>
+      <td><div onclick="playSound('plead');">plead <audio id="plead"></audio></div></td>
+      <td><div onclick="playSound('pleat');">pleat <audio id="pleat"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -176,9 +154,42 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>we</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>weed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>wheat</td>
+      <td><div onclick="playSound('see');">see <audio id="see"></audio></div></td>
+      <td><div onclick="playSound('seed');">seed <audio id="seed"></audio></div></td>
+      <td><div onclick="playSound('seat');">seat <audio id="seat"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div onclick="playSound('seize');">seize <audio id="seize"></audio></div></td>
+      <td><div onclick="playSound('cease');">cease <audio id="cease"></audio></div></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('she');">she <audio id="she"></audio></div></td>
+      <td><div onclick="playSound('sheed');">she'd <audio id="sheed"></audio></div></td>
+      <td><div onclick="playSound('sheet');">sheet <audio id="sheet"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('tea');">tea <audio id="tea"></audio></div></td>
+      <td><div onclick="playSound('teed');">teed <audio id="teed"></audio></div></td>
+      <td><div onclick="playSound('teat');">teat <audio id="teat"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('we');">we <audio id="we"></audio></div></td>
+      <td><div onclick="playSound('weed');">weed <audio id="weed"></audio></div></td>
+      <td><div onclick="playSound('wheat');">wheat <audio id="wheat"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -189,9 +200,9 @@
 
      <tr>
       <th rowspan="4">&#593;&#720;</th>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>bar</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>bard</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>Bart</td>
+      <td><div onclick="playSound('bar');">bar <audio id="bar"></audio></div></td>
+      <td><div onclick="playSound('bard');">bard <audio id="bard"></audio></div></td>
+      <td><div onclick="playSound('Bart');">Bart <audio id="Bart"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -200,69 +211,69 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>car</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>card</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>cart</td>
+      <td><div onclick="playSound('car');">car <audio id="car"></audio></div></td>
+      <td><div onclick="playSound('card');">card <audio id="card"></audio></div></td>
+      <td><div onclick="playSound('cart');">cart <audio id="cart"></audio></div></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>calve</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>calf</td>
-      <td></td>
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>halve</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>half</td>
+      <td><div onclick="playSound('calve');">calve <audio id="calve"></audio></div></td>
+      <td><div onclick="playSound('calf');">calf <audio id="calf"></audio></div></td>
       <td></td>
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>spa</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div onclick="playSound('halve');">halve <audio id="halve"></audio></div></td>
+      <td><div onclick="playSound('half');">half <audio id="half"></audio></div></td>
+      <td><div onclick="playSound('cars');">cars <audio id="cars"></audio></div></td>
+      <td></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('spa');">spa <audio id="spa"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>spas</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>sparce</td>
+      <td><div onclick="playSound(spas'');">spas <audio id="spas"></audio></div></td>
+      <td><div onclick="playSound('sparce');">sparce <audio id="sparce"></audio></div></td>
      </tr>
 
      <tr>
       <th rowspan="2">&#604;&#720;</th>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>her</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>heard</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>hurt</td>
+      <td><div onclick="playSound('her');">her <audio id="her"></audio></div></td>
+      <td><div onclick="playSound('heard');">heard <audio id="heard"></audio></div></td>
+      <td><div onclick="playSound('hurt');">hurt <audio id="hurt"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>hers</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>hearse</td>
+      <td><div onclick="playSound('hers');">hers <audio id="hers"></audio></div></td>
+      <td><div onclick="playSound('hearse');">hearse <audio id="hearse"></audio></div></td>
      </tr>
 
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>were</td>
+      <td><div onclick="playSound('were');">were <audio id="were"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>whirrs</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>worse</td>
+      <td><div onclick="playSound('whirrs');">whirrs <audio id="whirrs"></audio></div></td>
+      <td><div onclick="playSound('worse');">worse <audio id="worse"></audio></div></td>
      </tr>
 
      <tr>
       <th rowspan="5">u&#720;</th>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>shoe</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>shoed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>shoot</td>
+      <td><div onclick="playSound('shoe');">shoe <audio id="shoe"></audio></div></td>
+      <td><div onclick="playSound('shoed');">shoed <audio id="shoed"></audio></div></td>
+      <td><div onclick="playSound('shoot');">shoot <audio id="shoot"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -271,42 +282,42 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>Jew</td>
+      <td><div onclick="playSound('Jew');">Jew <audio id="Jew"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>Jews</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>juice</td>
+      <td><div onclick="playSound('Jews');">Jews <audio id="Jews"></audio></div></td>
+      <td><div onclick="playSound('juice');">juice <audio id="juice"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>moo</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>mood</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>moot</td>
+      <td><div onclick="playSound('moo');">moo <audio id="moo"></audio></div></td>
+      <td><div onclick="playSound('mood');">mood <audio id="mood"></audio></div></td>
+      <td><div onclick="playSound('moot');">moot <audio id="moot"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>moos</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>moose</td>
+      <td><div onclick="playSound('moos');">moos <audio id="moos"></audio></div></td>
+      <td><div onclick="playSound('moose');">moose <audio id="moose"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>loo</td>
+      <td><div onclick="playSound('loo');">loo <audio id="loo"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lose</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>loose</td>
+      <td><div onclick="playSound('lose');">lose <audio id="lose"></audio></div></td>
+      <td><div onclick="playSound('loose');">loose <audio id="loose"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>who</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>who'd</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>hoot</td>
+      <td><div onclick="playSound('who');">who <audio id="who"></audio></div></td>
+      <td><div onclick="playSound('whod');">who'd <audio id="whod"></audio></div></td>
+      <td><div onclick="playSound('hoot');">hoot <audio id="hoot"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -317,31 +328,31 @@
 
      <tr>
       <th rowspan="5">&#596;&#720;</th>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>core</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>cord</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>court</td>
+      <td><div onclick="playSound('core');">core <audio id="core"></audio></div></td>
+      <td><div onclick="playSound('cord');">cord <audio id="cord"></audio></div></td>
+      <td><div onclick="playSound('court');">court <audio id="court"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>cause</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>course</td>
+      <td><div onclick="playSound('cause');">cause <audio id="cause"></audio></div></td>
+      <td><div onclick="playSound('course');">course <audio id="course"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>more</td>
+      <td><div onclick="playSound('more');">more <audio id="more"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>moors</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>Morse</td>
+      <td><div onclick="playSound('moors');">moors <audio id="moors"></audio></div></td>
+      <td><div onclick="playSound('Morse');">Morse <audio id="Morse"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>or</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>awed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>ought</td>
+      <td><div onclick="playSound('or');">or <audio id="or"></audio></div></td>
+      <td><div onclick="playSound('awed');">awed <audio id="awed"></audio></div></td>
+      <td><div onclick="playSound('ought');">ought <audio id="ought"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -350,77 +361,77 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>saw</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>sawed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>sought</td>
+      <td><div onclick="playSound('saw');">saw <audio id="saw"></audio></div></td>
+      <td><div onclick="playSound('sawed');">sawed <audio id="sawed"></audio></div></td>
+      <td><div onclick="playSound('sought');">sought <audio id="sought"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>saws</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>source</td>
+      <td><div onclick="playSound('saws');">saws <audio id="saws"></audio></div></td>
+      <td><div onclick="playSound('source');">source <audio id="source"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>whore</td>
+      <td><div onclick="playSound('whore');">whore <audio id="whore"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>whores</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>horse</td>
+      <td><div onclick="playSound('whores');">whores <audio id="whores"></audio></div></td>
+      <td><div onclick="playSound('horse');">horse <audio id="horse"></audio></div></td>
      </tr>
 
      <tr>
       <th rowspan="6">e&#618;</th>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>gray</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>grade</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>great</td>
+      <td><div onclick="playSound('gray');">gray <audio id="gray"></audio></div></td>
+      <td><div onclick="playSound('grade');">grade <audio id="grade"></audio></div></td>
+      <td><div onclick="playSound('great');">great <audio id="great"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>greys</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>grace</td>
+      <td><div onclick="playSound('greys');">greys <audio id="greys"></audio></div></td>
+      <td><div onclick="playSound('grace');">grace <audio id="grace"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lay</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>laid</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>late</td>
+      <td><div onclick="playSound('lay');">lay <audio id="lay"></audio></div></td>
+      <td><div onclick="playSound('laid');">laid <audio id="laid"></audio></div></td>
+      <td><div onclick="playSound('late');">late <audio id="late"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lays</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lace</td>
+      <td><div onclick="playSound('lays');">lays <audio id="lays"></audio></div></td>
+      <td><div onclick="playSound('lace');">lace <audio id="lace"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>may</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>made</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>mate</td>
+      <td><div onclick="playSound('may');">may <audio id="may"></audio></div></td>
+      <td><div onclick="playSound('made');">made <audio id="made"></audio></div></td>
+      <td><div onclick="playSound('mate');">mate <audio id="mate"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>maze</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>mace</td>
+      <td><div onclick="playSound('maze');">maze <audio id="maze"></audio></div></td>
+      <td><div onclick="playSound('mace');">mace <audio id="mace"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>play</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>played</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>plate</td>
+      <td><div onclick="playSound('play');">play <audio id="play"></audio></div></td>
+      <td><div onclick="playSound('played');">played <audio id="played"></audio></div></td>
+      <td><div onclick="playSound('plate');">plate <audio id="plate"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>plays</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>place</td>
+      <td><div onclick="playSound('plays');">plays <audio id="plays"></audio></div></td>
+      <td><div onclick="playSound('place');">place <audio id="place"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>stay</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>stayed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>state</td>
+      <td><div onclick="playSound('stay');">stay <audio id="stay"></audio></div></td>
+      <td><div onclick="playSound('stayed');">stayed <audio id="stayed"></audio></div></td>
+      <td><div onclick="playSound('state');">state <audio id="state"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -429,55 +440,44 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>way</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>weighed</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>wait</td>
+      <td><div onclick="playSound('way');">way <audio id="way"></audio></div></td>
+      <td><div onclick="playSound('weighed');">weighed <audio id="weighed"></audio></div></td>
+      <td><div onclick="playSound('wait');">wait <audio id="wait"></audio></div></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>wave</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>waif</td>
+      <td><div onclick="playSound('wave');">wave <audio id="wave"></audio></div></td>
+      <td><div onclick="playSound('waif');">waif <audio id="waif"></audio></div></td>
       <td></td>
       <td></td>
      </tr>
 
      <tr>
       <th rowspan="13">a&#618;</th>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>die</td>
+      <td><div onclick="playSound('die');">die <audio id="die"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>dies</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>dice</td>
+      <td><div onclick="playSound('dies');">dies <audio id="dies"></audio></div></td>
+      <td><div onclick="playSound('dice');">dice <audio id="dice"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>eye</td>
+      <td><div onclick="playSound('eye');">eye <audio id="eye"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>eyes</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>ice</td>
+      <td><div onclick="playSound('eyes');">eyes <audio id="eyes"></audio></div></td>
+      <td><div onclick="playSound('ice');">ice <audio id="ice"></audio></div></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>fry</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>fried</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>fright</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>high</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>hide</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>height</td>
+      <td><div onclick="playSound('fry');">fry <audio id="fry"></audio></div></td>
+      <td><div onclick="playSound('fried');">fried <audio id="fried"></audio></div></td>
+      <td><div onclick="playSound('fright');">fright <audio id="fright"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -486,42 +486,9 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lie</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lied</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>light</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lies</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>lice</td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>pry</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>prize</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>price</td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>rye</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>ride</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>write</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>rise</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>rice</td>
-     </tr>
-     <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>sigh</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>side</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>site</td>
+      <td><div onclick="playSound('high');">high <audio id="high"></audio></div></td>
+      <td><div onclick="playSound('hide');">hide <audio id="hide"></audio></div></td>
+      <td><div onclick="playSound('height');">height <audio id="height"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
@@ -530,9 +497,53 @@
       <td></td>
      </tr>
      <tr>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>spy</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>spied</td>
-      <td><div onclick="playSound('');"> <audio id=""></audio></div>spite</td>
+      <td><div onclick="playSound('lie');">lie <audio id="lie"></audio></div></td>
+      <td><div onclick="playSound('lied');">lied <audio id="lied"></audio></div></td>
+      <td><div onclick="playSound('light');">light <audio id="light"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div onclick="playSound('lies');">lies <audio id="lies"></audio></div></td>
+      <td><div onclick="playSound('lice');">lice <audio id="lice"></audio></div></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('pry');">pry <audio id="pry"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div onclick="playSound('prize');">prize <audio id="prize"></audio></div></td>
+      <td><div onclick="playSound('price');">price <audio id="price"></audio></div></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('rye');">rye <audio id="rye"></audio></div></td>
+      <td><div onclick="playSound('ride');">ride <audio id="ride"></audio></div></td>
+      <td><div onclick="playSound('write');">write <audio id="write"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div onclick="playSound('rise');">rise <audio id="rise"></audio></div></td>
+      <td><div onclick="playSound('rice');">rice <audio id="rice"></audio></div></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('sigh');">sigh <audio id="sigh"></audio></div></td>
+      <td><div onclick="playSound('side');">side <audio id="side"></audio></div></td>
+      <td><div onclick="playSound('site');">site <audio id="site"></audio></div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <td><div onclick="playSound('spy');">spy <audio id="spy"></audio></div></td>
+      <td><div onclick="playSound('spied');">spied <audio id="spied"></audio></div></td>
+      <td><div onclick="playSound('spite');">spite <audio id="spite"></audio></div></td>
       <td></td>
       <td></td>
       <td></td>
