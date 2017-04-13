@@ -35,10 +35,52 @@
 
 <body>
   <h1 class="text-center">Pre-fortis clipping</h1>
-
-
+<h2 class="text-center">PHP table</h2>
   <div class="container">
-    <table class="table  table-hover table-responsive table-bordered">
+
+    <?php
+    $clipping = array(
+      array("bee",1,"none"),
+      array("bead",1,"d"),
+      array("beat",1,"t"),
+      array("",1,"g"),
+      array("",1,"k"),
+      array("",1,"v"),
+      array("",1,"f"),
+      array("",1,"z"),
+      array("",1,"s"),
+
+      array("fee",1,"none"),
+      array("feed",1,"d"),
+      array("feet",1,"t"),
+      array("",1,"g"),
+      array("",1,"k"),
+      array("",1,"v"),
+      array("",1,"f"),
+      array("",1,"z"),
+      array("",1,"s"),
+    );
+
+    echo "<table>";
+
+      for($i=0; $i<count($clipping); $i++){
+
+        echo '<tr><td>'.$clipping[$i][0].'</td>';
+        if ([2]=="s") {
+          echo "</tr>";
+        }
+
+      }
+    echo "</table>";
+
+    echo $clipping[3][0].": Vowel: ".$clipping[3][1].", Ending: ".$clipping[3][2].".";
+     ?>
+  </div>
+
+
+<h2 class="text-center">Classic, yet interractive and responsive, table</h2>
+  <div class="container">
+    <table class="table table-hover table-responsive table-bordered">
 
      <thead class="thead-default">
      <tr>
