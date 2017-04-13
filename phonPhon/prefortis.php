@@ -13,19 +13,30 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
   <h1 class="text-center">Pre-fortis clipping</h1>
 
+  <audio controls>
+   <source src="media/soundFiles/clipping/bead.mp3" type="audio/mpeg">
+     Your browser does not support the audio element.
+   </audio>
+
+
+   <audio preload="auto">
+     <source src="media/soundFiles/clipping/bead.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+   </audio>
+
+   <button id="idj-play-button" class="btn btn-xs"><i class="glyphicon glyphicon-play"></i></button>
+   <button id="idj-pause-button" class="btn btn-xs hide"><i class="glyphicon glyphicon-pause"></i></button>
+
+
+
+
   <div class="container">
     <table class="table  table-responsive table-striped table-bordered">
-     <col >
-     <col>
-     <col>
-     <col>
 
      <thead class="thead-default">
      <tr>
@@ -44,7 +55,7 @@
 
      <tr>
       <th rowspan="12">i&#720;</th>
-      <td>bee</td>
+      <td>bee <span class="glyphicon glyphicon-play-circle"></span></td>
       <td>bead</td>
       <td>beat</td>
       <td></td>
