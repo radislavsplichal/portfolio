@@ -10,7 +10,7 @@ include 'shoppingList/databaseConnection.php';
     <div class="row col-sm-3 col-xs-0"></div>
     <div class=" col-sm-6 ">
 
-        <div class="page-header">
+        <div class="page-header text-center">
             <h1>Nákupní Seznam</h1>
             <p>Do formuláře zapiš věci, které se mají nakoupit. Nezapomeň to uložit.</p>
         </div>
@@ -39,7 +39,7 @@ include 'shoppingList/databaseConnection.php';
                     <input class="form-control" id="cenaKus" type="number" min="0" step="0.01" name="unitPrice[]" maxlength="10" value="0">
                 </div>
 
-                <div class="glyphicon glyphicon-plus col-sm-1" onClick="addInput('dynamicForm')"></div>
+                <div class="glyphicon glyphicon-plus col-sm-1" title="Přidat další položku" onClick="addInput('dynamicForm')"></div>
 
             </div>
             </div>
@@ -54,7 +54,7 @@ include 'shoppingList/databaseConnection.php';
                 <input class="form-control" id="imp" type="checkbox" name="important" value="true">
             </div>
             <hr>
-            <div align="right">
+            <div align="center">
                 <button type="reset" class="btn btn-danger">Smazat</button>
             <button type="submit" class="btn btn-primary">Uložit</button>
             </div>
@@ -98,8 +98,8 @@ if ($result->num_rows > 0) {
         <div class="panel '.$important.'">
         <div class="panel-heading">
         <h3 class="panel-title col-sm-10">'.$row["date"]." "  .$row["time"]." ".$row["listName"].'</h3>
-        <div class="glyphicon glyphicon-pencil col-sm-1"> </div>
-        <div class="glyphicon glyphicon-remove col-sm-1"></div>
+<!--        <div class="glyphicon glyphicon-pencil col-sm-1"> </div>
+        <div class="glyphicon glyphicon-remove col-sm-1"></div> -->
         <br>
         </div>
 
@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
 
         <form action="shoppingList/deleteItem.php" method="post" >
             <input type="hidden" name="itemID" value="'.$row["itemID"].'"></input>
-            <div onClick="this.parentNode.submit();" type="submit" class="glyphicon glyphicon-remove col-sm-1"></div>
+            <div onClick="this.parentNode.submit();" type="submit" class="glyphicon glyphicon-remove col-sm-1" title="Odstranit položku"></div>
         </form>
 
 

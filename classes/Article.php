@@ -36,10 +36,10 @@ public function displayArticle () {
         <div style="display: inline;" class="administration button-group pull-right" role="group" aria-label="...">
         <form method="POST" action="deleteArticle.php">
           <input type="hidden" name="id" value='.$this->id.'></input>
-          <button type="button" onClick="this.parentNode.submit();" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
+          <button type="button" title="Odstranit článek" onClick="this.parentNode.submit();" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
         </form><form method="POST" action="editArticle.php">
           <input type="hidden" name="id" value='.$this->id.'></input>
-          <button type="button" onClick="this.parentNode.submit();" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
+          <button type="button" title="Upravit článek" onClick="this.parentNode.submit();" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
         </form>
         </div>
         <div class="panel-heading"><b>'.$this->title.'</b></br>

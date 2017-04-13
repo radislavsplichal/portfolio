@@ -21,7 +21,7 @@
   <h1 class="text-center">Pre-fortis clipping</h1>
 
   <div class="container">
-    <table class="table table-striped table-bordered">
+    <table class="table  table-responsive table-striped table-bordered">
      <col >
      <col>
      <col>

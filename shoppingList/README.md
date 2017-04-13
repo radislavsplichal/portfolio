@@ -10,4 +10,6 @@ Version 1.1
 You can mark items as important to distinguish them.
 Item text is now a required field.
 
+Version 1.2
 
+Minor fixes

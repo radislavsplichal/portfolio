@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     echo '<div class="alert alert-danger" role="alert">'."Error: " . $sql . "<br>" . $conn->error;
 }
- echo '<div class="alert alert-success" role="alert">Spojení s databází bylo navázáno.</div>';
+// echo '<div class="alert alert-success" role="alert">Spojení s databází bylo navázáno.</div>';
 
 //$conn->close();
 ?>
