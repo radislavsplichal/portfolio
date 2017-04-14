@@ -67,6 +67,7 @@ $website->showArticles($conn);
             <li><a href="router.php?activePage=2">Blog</a></li>
             <li><a href="router.php?activePage=3">Shopping List</a></li>
             <li><a href="router.php?activePage=4">Radnom Quote Machine</a></li>
+            <li><a href="router.php?activePage=5">Weather App</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -132,6 +133,9 @@ $website->showArticles($conn);
                     break;
                 case 4:
                     include 'freeCodeCamp/quoteMachine.php';
+                    break;
+                case 5:
+                    include 'freeCodeCamp/weatherApp/weather.php';
                     break;
             }
 
