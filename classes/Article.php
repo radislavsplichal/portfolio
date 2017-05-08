@@ -2,6 +2,7 @@
 // This class is responsible for all actions regarding the articles in the app.
 // create, edit, update, delete
 include ('databaseConnection.php');
+include ('contentManagement.php');
 //echo $servername;
 class Article
 {
@@ -15,17 +16,19 @@ class Article
   public $querry;
 
 public function insertArticle ($conn,$title, $text) {
-  $date = date('d.m.Y');
-  $author = "Admin";
-  $sql = "INSERT INTO articles (author, article, dateCreated, title) VALUES ('$author', '$text', '$date', '$title');";
+	$date = date('d.m.Y');
+	$author = "Admin";
+	$type = "articles";
+	$arguments ="author, article, dateCreated, title";
+	$values = $author."','".$text."','".$date."','".$title;
 
-  if ($conn->query($sql) === TRUE){
-                        echo "Success!";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
-                    }
 
-                  }
+	$bot = new Lilly;
+	$bot->saveObject($type,$arguments,$values,$conn);
+	echo 'Article Saved';
+}
+  //$sql = "INSERT INTO articles (author, article, dateCreated, title) VALUES ('$author', '$text', '$date', '$title');";
+
 
 
 public function displayArticle () {
