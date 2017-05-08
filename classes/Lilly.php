@@ -8,36 +8,63 @@
 
 //to instatiate her just create an bot-> new Lilly; and use one of her trics
 
-//To be added and removed from all the classes
-//include ('databaseConnection.php');
 
 class Lilly {
 
-	//private $name = Lilly;
-	public function makeSandwich($type) {
-		echo "go F* yourself :D";
+	private $conn;
+
+	private function establishConnection(){
+
+		// configuration of the database
+		$servername = "89.239.10.163";
+		$username = "blogger";
+		$password = "pJOToXed0MzjySW7";
+		$dbname = "radislavsplichal";
+
+		// Create connection
+		 $this->conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($this->conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		    echo '<div class="alert alert-danger" role="alert">'."Error: " . $sql . "<br>" . $conn->error;
+		}
 
 	}
-
-	public function saveObject ($type,$arguments,$values,$conn) {
-
-		$sql= "INSERT INTO $type ($arguments) VALUES ('$values');";
-		echo $sql;
-		if ($conn->query($sql) === TRUE){
-                        echo "Success!";
+	private function executeQuerry($sql){
+		if ($this->conn->query($sql) === TRUE){
+												echo "Success!";
 						$response = ['OK'];
 						return $response;
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
+										} else {
+												echo "Error: " . $sql . "<br>" . $conn->error;
 						$response = ['Connection Error',$conn->error];
 						return $response;
-                    }
+										}
+	}
+
+
+	public function saveObject ($type,$arguments,$values) {
+		$this->establishConnection();
+		// values need to be separated by "','" and concatanated by .
+		$sql= "INSERT INTO $type ($arguments) VALUES ('$values');";
+
+		$this->executeQuerry($sql);
+
 
                   }
 
+
+
+	public function deleteObject($id,$type){
+
+		$this->establishConnection();
+
+		$sql = "DELETE FROM $type WHERE id ='$id' ";
+
+		$this->executeQuerry($sql);
 	}
 
-
+}
 
 
 ?>

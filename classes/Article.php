@@ -1,8 +1,8 @@
 <?php
 // This class is responsible for all actions regarding the articles in the app.
 // create, edit, update, delete
-include ('databaseConnection.php');
-include ('Lilly.php');
+//include ('databaseConnection.php');
+//include ('Lilly.php');
 //echo $servername;
 class Article
 {
@@ -15,7 +15,7 @@ class Article
   public $title;
   public $querry;
 
-public function insertArticle ($conn,$title, $text) {
+public function insertArticle ($title, $text) {
 	$date = date('d.m.Y');
 	$author = "Admin";
 	$type = "articles";
@@ -24,7 +24,7 @@ public function insertArticle ($conn,$title, $text) {
 
 
 	$bot = new Lilly;
-	$bot->saveObject($type,$arguments,$values,$conn);
+	$bot->saveObject($type,$arguments,$values);
 	echo 'Article Saved';
 }
   //$sql = "INSERT INTO articles (author, article, dateCreated, title) VALUES ('$author', '$text', '$date', '$title');";
@@ -59,15 +59,12 @@ public function displayArticle () {
         </div>';
 }
 
-public function destroyArticle($conn, $id){
- $sql = "DELETE FROM articles WHERE id ='$id' ";
-  if ($conn->query($sql) === TRUE){
-                        echo "Success! Article Deleted!";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
-                    }
+public function destroyArticle($id){
+$type = 'articles';
+$bot = new Lilly;
+$bot->deleteObject($id,$type);
 
-                  }
+ }
 
 
 public function editArticle($conn, $id, $article, $title){

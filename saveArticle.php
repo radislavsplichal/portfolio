@@ -1,12 +1,13 @@
 <?php
-include 'classes/Article.php';
+include 'classes/loadComponents.php';
+
 
 
   $title = $_GET["title"];
   $text = $_GET["text"];
 
   $newArticle = new Article;
-  $newArticle->insertArticle($conn,$title, $text);
+  $newArticle->insertArticle($title, $text);
 
   header("Location:"."index.php");
   exit();

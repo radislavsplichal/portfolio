@@ -2,7 +2,7 @@
 <?php
 // session_start();
 include 'classes/loadComponents.php';
-
+include 'databaseConnection.php';
 //include 'router.php';
 
 if (isset($_GET['activePage'])){
@@ -13,7 +13,7 @@ $website = new Page;
 $website->displayLogin();
 $website->showArticles($conn);
 //echo "hello world";
-//include 'databaseConnection.php';
+
 
 // if (isset($_SESSION['username'])){
 //
