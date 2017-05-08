@@ -5,11 +5,14 @@ include 'classes/loadComponents.php';
 $id = $_POST['id'];
 
 $article = new Article;
-$article->destroyArticle($id);
+$article->deleteArticle($id);
 
 header("Location:"."index.php");
 exit();
 
+//Joe the handler
 
+//$object = new $type;
+//$object->$action(args);
 
  ?>

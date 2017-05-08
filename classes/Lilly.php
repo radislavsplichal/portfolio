@@ -22,24 +22,24 @@ class Lilly {
 		$dbname = "radislavsplichal";
 
 		// Create connection
-		 $this->conn = new mysqli($servername, $username, $password, $dbname);
+		$this->conn = new mysqli($servername, $username, $password, $dbname);
 		// Check connection
 		if ($this->conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		    echo '<div class="alert alert-danger" role="alert">'."Error: " . $sql . "<br>" . $conn->error;
+			die("Connection failed: " . $conn->connect_error);
+			echo '<div class="alert alert-danger" role="alert">'."Error: " . $sql . "<br>" . $conn->error;
 		}
 
 	}
 	private function executeQuerry($sql){
 		if ($this->conn->query($sql) === TRUE){
-												echo "Success!";
-						$response = ['OK'];
-						return $response;
-										} else {
-												echo "Error: " . $sql . "<br>" . $conn->error;
-						$response = ['Connection Error',$conn->error];
-						return $response;
-										}
+			echo "Success!";
+			$response = ['OK'];
+			return $response;
+		} else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+			$response = ['Connection Error',$conn->error];
+			return $response;
+		}
 	}
 
 
@@ -51,9 +51,7 @@ class Lilly {
 		$this->executeQuerry($sql);
 
 
-                  }
-
-
+	}
 
 	public function deleteObject($id,$type){
 
@@ -62,6 +60,10 @@ class Lilly {
 		$sql = "DELETE FROM $type WHERE id ='$id' ";
 
 		$this->executeQuerry($sql);
+	}
+
+	public function editObject($id,$type){
+		//to be added
 	}
 
 }

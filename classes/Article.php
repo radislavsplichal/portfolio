@@ -59,7 +59,7 @@ public function displayArticle () {
         </div>';
 }
 
-public function destroyArticle($id){
+public function deleteArticle($id){
 $type = 'articles';
 $bot = new Lilly;
 $bot->deleteObject($id,$type);
