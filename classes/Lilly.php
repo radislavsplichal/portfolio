@@ -2,6 +2,7 @@
 //this is an experimental approach to unify the site management processes
 //Lilly can do stuff and all it needs is just a call.
 
+//To be added and removed from all the classes
 //include ('databaseConnection.php');
 
 class Lilly {

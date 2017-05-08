@@ -2,7 +2,7 @@
 // This class is responsible for all actions regarding the articles in the app.
 // create, edit, update, delete
 include ('databaseConnection.php');
-include ('contentManagement.php');
+include ('Lilly.php');
 //echo $servername;
 class Article
 {
